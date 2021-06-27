@@ -21,7 +21,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: |
-          echo  "Secret is: $TELEGRAM_BOT_TOKEN"
+          env
 
       - name: Installing dependencies for all browsers...
         run: npx playwright install-deps
