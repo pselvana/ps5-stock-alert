@@ -28,4 +28,7 @@ jobs:
         run: yarn
 
       - name: Running script...
+        env:
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: yarn run-check-stock
