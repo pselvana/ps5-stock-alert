@@ -9,10 +9,6 @@ jobs:
   run-check:
     runs-on: macos-latest
     env:
-      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-      SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
-      SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
       DEBUG: pw:api
 
     steps:
@@ -20,6 +16,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
+
+      - shell: bash
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          echo  "Secret is: $TELEGRAM_BOT_TOKEN"
 
       - name: Installing dependencies for all browsers...
         run: npx playwright install-deps
