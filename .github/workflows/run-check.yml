@@ -17,12 +17,6 @@ jobs:
         with:
           node-version: 16
 
-      - shell: bash
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-        run: |
-          env
-
       - name: Installing dependencies for all browsers...
         run: npx playwright install-deps
 
