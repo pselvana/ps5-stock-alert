@@ -38,11 +38,4 @@ export const links: Link[] = [
     dataDefaultAsin: "B08FC6MR62",
     type: LinkType.AMAZON,
   },
-  {
-    name: "Amazon Test Controller",
-    url:
-      "https://www.amazon.com/DualSense-Wireless-Controller-PlayStation-5/dp/B08FC6C75Y",
-    dataDefaultAsin: "B08FC6C75Y",
-    type: LinkType.AMAZON,
-  },
 ];
