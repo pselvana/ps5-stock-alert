@@ -32,7 +32,7 @@ export const links: Link[] = [
     type: LinkType.AMAZON,
   },
   {
-    name: "Amazon IT - Digital",
+    name: "Amazon Digital",
     url:
       "https://www.amazon.com/PlayStation-5-Digital/dp/B08FC6MR62",
     dataDefaultAsin: "B08FC6MR62",
