@@ -7,7 +7,7 @@ on:
 
 jobs:
   run-check:
-    runs-on: ubuntu-latest
+    runs-on: 	windows-latest
     env:
       DEBUG: pw:api
 
