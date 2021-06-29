@@ -71,6 +71,15 @@ export const checkPages = async () => {
         page
       );
     }
+    
+    if (link.type === LinkType.TARGET) {
+      const title = await page.textContent('[data-test="soldOutBlock"]');
+      await handleStockAvailability(
+        link,
+        !title.includes("Sold out"),
+        page
+      );
+    }
 
     if (link.type === LinkType.CYBERPORT) {
       const title = await page.textContent(
