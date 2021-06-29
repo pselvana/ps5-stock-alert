@@ -11,6 +11,7 @@ export enum LinkType {
   GAMESTOP = "GAMESTOP",
   EURONICS = "EURONICS",
   CYBERPORT = "CYBERPORT",
+  TARGET = "TARGET",
 }
 
 export const links: Link[] = [
@@ -37,5 +38,15 @@ export const links: Link[] = [
       "https://www.amazon.com/PlayStation-5-Digital/dp/B08FC6MR62",
     dataDefaultAsin: "B08FC6MR62",
     type: LinkType.AMAZON,
+  },
+    {
+    name: "Target Disc",
+    url: "https://www.target.com/p/playstation-5-console/-/A-81114595",
+    type: LinkType.TARGET,
+  },
+  {
+    name: "Target Digital",
+    url: "https://www.target.com/p/playstation-5-digital-edition-console/-/A-81114596",
+    type: LinkType.TARGET,
   },
 ];
