@@ -10,6 +10,7 @@ jobs:
     runs-on: 	windows-latest
     env:
       DEBUG: pw:api
+      HEADLESS: true
 
     steps:
       - uses: actions/checkout@v2
