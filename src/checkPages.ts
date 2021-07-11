@@ -34,6 +34,8 @@ export const checkPages = async () => {
   });
 
   for (const link of links) {
+    try {
+    
     const page = await browserContext.newPage();
     await page.goto(link.url);
 
@@ -103,6 +105,9 @@ export const checkPages = async () => {
       await handleStockAvailability(link, !!addToCartButton, page);
     }
     await page.close();
+    } catch (e) {
+        console.error(e);
+    }
   }
 
   await browserContext.close();
